@@ -5,9 +5,12 @@ import json
 import time
 import _thread
 from datetime import datetime
+import platform
 
-
-DOWNLOAD_DIR = 'C:\\Users\\Nadina\\Downloads'
+if platform.system() == 'Windows':
+    DOWNLOAD_DIR = 'C:\\Users\\Nadina\\Downloads'
+else:
+    DOWNLOAD_DIR = '/Users/nadina/Downloads'
 REMOTE_PATH = 'Temp/watch'
 LOG = 'dsyncerlog.json'
 
