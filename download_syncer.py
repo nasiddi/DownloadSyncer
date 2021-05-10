@@ -59,7 +59,7 @@ def main(name):
                 remove(f)
                 j_data[name]['files'].append(path.basename(f))
 
-            while len(j_data[name]) > 20:
+            while len(j_data[name]) > 100:
                 j_data[name].pop(0)
             save_json(j_data, LOG)
             srv.put(LOG)
